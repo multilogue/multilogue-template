@@ -19,16 +19,16 @@ def load_record(self):
 
 def create_md_text(template: dict, record: dict) -> str:
     for line in record:
-    md_text = template.format(
-        first_interlocutor_name=record['first_interlocutor_name'],
-        first_interlocutor_utterance=record['first_interlocutor_utterance']
-    )
-    md_text += template['second_interlocutor'].format(
-        second_interlocutor_utterance=record['second_interlocutor_utterance']
-    )
+        md_text = template.format(
+            first_interlocutor_name=record['first_interlocutor_name'],
+            first_interlocutor_utterance=record['first_interlocutor_utterance']
+        )
+        md_text += template['second_interlocutor'].format(
+            second_interlocutor_utterance=record['second_interlocutor_utterance']
+        )
     return md_text
 
 
 if __name__ == "__main__":
-    record =
+    record = load_record()
     create_md_text(template=simple_continuation)
