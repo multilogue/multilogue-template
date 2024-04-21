@@ -21,5 +21,8 @@ if __name__ == "__main__":
             main()
     except KeyboardInterrupt:
         # Clean shutdown
-        print("Keyboard Interrupt detected. Exiting...")
+        print("    Keyboard Interrupt detected. Exiting...")
+        # stop all the machines
+        pass # TODO implement STOP MACHINES
+        # quit
         exit(0)
